@@ -68,25 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-/_ .home {
-width: 100%;
-height: 100vh;
-background: rgb(249,2,2);
-background: linear-gradient(90deg, rgba(249,2,2,1) 0%, rgba(255,179,72,1) 100%);
-} _/
-
-// import React from 'react'
-// import './HomeStyles.css'
-
-// function Home() {
-// return(
-// <>
-// <div className='home'>
-// <></>
-// </div>
-// </>
-// )
-// }
-
-// export default Home;
