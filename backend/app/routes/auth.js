@@ -4,6 +4,7 @@ const UserController = require('../controllers/UserController');
 const AuthController = require('../controllers/AuthController');
 
 const router = express.Router();
+const jwtAuth = passport.authenticate('jwt', { session: false });
 
 /**
 *Route creates a new user and stores tham in the database
@@ -29,14 +30,12 @@ router.post('/login', (req, res) => {
 *
 */
 router.post('/deactivate',
-  passport.authenticate('jwt', { session: false }),
+	    passport.authenticate('jwt', { session: false }),
 	    AuthController.deactivate);
 
 /**
 *Route logs user out
 */
-router.post('/logout',
-	    passport.authenticate('jwt', {session: false}),
-	    AuthController.logout)
+router.post('/logout', jwtAuth, AuthController.logout)
 
 module.exports = router;

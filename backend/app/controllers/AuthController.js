@@ -26,7 +26,7 @@ class AuthController {
 
     if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
 
-    const token = jwt.sign({ userId: user._id }, TOKEN_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id.toString() }, TOKEN_SECRET);
     console.log(user._id);
 
     return res.json({ token });
@@ -46,7 +46,8 @@ class AuthController {
      *Deactivates account till user reactivates it
      *
      */
-  static async deactivate(req, res) {
+    static async deactivate(req, res) {
+	console.log(req);
     const { email } = req.body;
 
     if (!email) return res.status(404).json({ error: 'Email not found' });
