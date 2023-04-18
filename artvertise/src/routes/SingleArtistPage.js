@@ -7,6 +7,7 @@ import data3 from '../components/SingleArtistsData/Dids'
 import data4 from '../components/SingleArtistsData/Gulsik'
 import data5 from '../components/SingleArtistsData/Matheus'
 import data6 from '../components/SingleArtistsData/Martin'
+import data7 from '../components/SingleArtistsData/Wallace'
 
 function SingleArtistPage() {
   return (
@@ -123,6 +124,26 @@ export function SingleArtistPageMartin() {
                         price={data6.price}
                         rating={data6.rating}
                         url={data6.url}
+                    />
+                ))}
+    </div>
+    </>
+  )
+}
+
+export function SingleArtistPageWallace() {
+  return (
+    <>
+    <div className='artistsPage'>
+        {data7.map(data7 => (
+                    <SingleArtistArt
+                        id={data7.id}
+                        image={data7.image}
+                        name={data7.name}
+                        about={data7.about}
+                        price={data7.price}
+                        rating={data7.rating}
+                        url={data7.url}
                     />
                 ))}
     </div>

@@ -2,7 +2,7 @@ const wallaceData = [
     {
         id: 697,
         name: 'Wall Art',
-        image: 'https://images.pexels.com/photos/1227497/pexels-photo-1227497.jpeg?auto=compress&cs=tinysrgb&w=300',
+        image: 'https://images.pexels.com/photos/2422443/pexels-photo-2422443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'The picture showcases the stunning natural beauty of these mountains with their snow-capped peaks rising majestically against a clear blue sky. The foreground of the image includes a green forest, which provides a nice contrast to the white snow and adds to the overall composition of the picture.',
         rating: 5,
         price: 129,
@@ -11,7 +11,7 @@ const wallaceData = [
     {
         id: 684,
         name: 'Wood Art',
-        image: 'https://images.pexels.com/photos/889839/pexels-photo-889839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: 'https://images.pexels.com/photos/2745808/pexels-photo-2745808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image evokes a feeling of tranquility and peacefulness, inviting the viewer to pause and appreciate the beauty of nature. It can be a great visual aid for nature-related content, such as environmental conservation, eco-tourism, or outdoor recreation.',
         rating: 3,
         price: 599,
@@ -20,7 +20,7 @@ const wallaceData = [
     {
         id: 768,
         name: 'Multicolored Textile',
-        image: 'https://images.pexels.com/photos/165891/pexels-photo-165891.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+        image: 'https://images.pexels.com/photos/1137752/pexels-photo-1137752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image can be used to convey a sense of adventure, exploration, and awe-inspiring natural beauty. It is a great visual aid for travel and tourism-related content, outdoor activities, or environmental awareness. It reminds us of the beauty and power of nature and inspires us to explore and appreciate the world around us.',
         rating: 4,
         price: 629,
@@ -47,7 +47,7 @@ const wallaceData = [
     {
         id: 733,
         name: 'Vintage Painting',
-        image: 'https://images.unsplash.com/photo-1582201942930-53fea460eeeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=691&q=80',
+        image: 'https://images.pexels.com/photos/1936711/pexels-photo-1936711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: '"Kept in the Dark - When the Letter was completed she found it to be one which she could not send" is a powerful and evocative painting that explores the theme of secrets and their impact on the human psyche. Its use of light and shadow, as well as its emotional intensity, make it a striking work of art that continues to resonate with viewers today.',
         rating: 5,
         price: 679,
@@ -74,7 +74,7 @@ const wallaceData = [
     {
         id: 589,
         name: 'Sketch Art',
-        image: 'https://images.unsplash.com/photo-1595752024492-e8ceaea3efc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
         about: 'This image conveys a sense of connection and responsibility to the natural world. It reminds us that we are all part of a larger ecosystem, and that our actions have an impact on the health and well-being of the planet. The image is a powerful visual aid that can inspire and motivate viewers to take action towards a more sustainable and responsible way of living.',
         rating: 3,
         price: 208,
@@ -92,7 +92,7 @@ const wallaceData = [
     {
         id: 790,
         name: 'Arts and Culture',
-        image: 'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/3519103/pexels-photo-3519103.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
         about: 'This image conveys a sense of potential, creativity, and focus. It is a simple yet effective visual aid that can be used in various contexts to inspire or motivate others to express themselves through art or writing. It reminds us of the power of creativity and self-expression in promoting personal growth and fulfillment.',
         rating: 5,
         price: 675,
@@ -101,7 +101,7 @@ const wallaceData = [
     {
         id: 879,
         name: 'Abstract Painting',
-        image: 'https://images.pexels.com/photos/3063362/pexels-photo-3063362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: 'https://images.pexels.com/photos/2346120/pexels-photo-2346120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of confidence, natural beauty, and authenticity. It is a versatile visual aid that can be used in various contexts to promote products, services, or ideas related to personal development, self-care, and natural beauty. It reminds us of the power of simplicity and authenticity in conveying a message or promoting a brand.',
         rating: 4,
         price: 544,

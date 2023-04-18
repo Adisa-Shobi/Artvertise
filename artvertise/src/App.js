@@ -13,7 +13,7 @@ import SignUp from './routes/SignUp';
 import Login from './routes/Login';
 import ArtistsPage from './routes/ArtistsPage';
 import Footer from './components/Footer/Footer';
-import SingleArtistPage, { SingleArtistPageDids, SingleArtistPageGulsik, SingleArtistPageMartin, SingleArtistPageMatheus, SingleArtistPageSteve } from './routes/SingleArtistPage';
+import SingleArtistPage, { SingleArtistPageDids, SingleArtistPageGulsik, SingleArtistPageMartin, SingleArtistPageMatheus, SingleArtistPageSteve, SingleArtistPageWallace } from './routes/SingleArtistPage';
 import Checkout from './routes/Checkout';
 import Payment from './routes/Payment';
 // import SingleArtistPageOne from './routes/SingleArtistPageOne';
@@ -59,7 +59,7 @@ function App() {
         </Route>
 
         <Route path='/Wallace Chuck'>
-            <SingleArtistPage />
+            <SingleArtistPageWallace />
             <Footer />
         </Route>
 
