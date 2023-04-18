@@ -3,7 +3,9 @@ import './ArtistsStyles.css';
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 
-function Artists(props) {
+function Artists({ id, image, name, totalSales, rating, url }) {
+//   const artType='artpotraits'
+
   return (
     <div>
         <nav className='Artists-NavbarItems'>
@@ -13,22 +15,24 @@ function Artists(props) {
             <h5>Hi Guest</h5>
         </nav>
         <div className='artistsList'>
-            <div key={props.id} className='artistsCard'>
-                <img src={props.image} alt='artists-img' className='artistsImage'></img>
+            <div key={id} className='artistsCard'>
+                <img src={image} alt='artists-img' className='artistsImage'></img>
 
                 <div className='artistsCard__content'>
-                    <h3 className='artistsName'>{props.name}</h3>
+                    <h3 className='artistsName'>{name}</h3>
                     <div className='displayStack__1'>
-                        <div className='artistsSales'><span className='unitsSold'>{props.totalSales}</span> units sold</div>
+                        <div className='artistsSales'><span className='unitsSold'>{totalSales}</span> units sold</div>
                     </div>
                     <div className='displayStack__2'>
                         <div className='artistsRating'>
-                            {[...Array(props.rating)].map((index) => (
+                            {[...Array(rating)].map((index) => (
                                 <FaStar id={index + 1 } key={index} />
                             ))}
                         </div>
                     </div>
-                    <button className='viewArt-button'><a href='/artpotraits' className='viewArt-link'>View Art</a></button>
+                    <Link to={`/${name}`}>
+                        <button className='viewArt-button'>View Art</button>
+                    </Link>
                 </div>
             </div>
         </div>

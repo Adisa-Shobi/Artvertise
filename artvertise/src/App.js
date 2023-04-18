@@ -13,9 +13,10 @@ import SignUp from './routes/SignUp';
 import Login from './routes/Login';
 import ArtistsPage from './routes/ArtistsPage';
 import Footer from './components/Footer/Footer';
-import SingleArtistPage from './routes/SingleArtistPage';
+import SingleArtistPage, { SingleArtistPageDids, SingleArtistPageGulsik, SingleArtistPageMartin, SingleArtistPageMatheus, SingleArtistPageSteve } from './routes/SingleArtistPage';
 import Checkout from './routes/Checkout';
 import Payment from './routes/Payment';
+// import SingleArtistPageOne from './routes/SingleArtistPageOne';
 
 function App() {
   return (
@@ -32,10 +33,66 @@ function App() {
             <Checkout />
           </Route>
 
-        <Route path='/artpotraits'>
+        <Route path='/Shon Ejai'>
             <SingleArtistPage />
             <Footer />
-          </Route>
+        </Route>
+
+        <Route path='/Dids'>
+            <SingleArtistPageDids />
+            <Footer />
+        </Route>
+
+        <Route path='/Gulsik'>
+            <SingleArtistPageGulsik />
+            <Footer />
+        </Route>
+
+        <Route path='/Matheus Viana'>
+            <SingleArtistPageMatheus />
+            <Footer />
+        </Route>
+
+        <Route path='/Martin Pechy'>
+            <SingleArtistPageMartin />
+            <Footer />
+        </Route>
+
+        <Route path='/Wallace Chuck'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
+        <Route path='/Fiona Art'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
+        <Route path='/Steve Johnson'>
+            <SingleArtistPageSteve />
+            <Footer />
+        </Route>
+
+        <Route path='/Azra Tuba Demir'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
+        <Route path='/Edward Eyer'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
+        <Route path='/Anni Roenkae'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
+        <Route path='/Kevin Gamba'>
+            <SingleArtistPage />
+            <Footer />
+        </Route>
+
 
        <Route path='/artists'>
           <ArtistsPage />

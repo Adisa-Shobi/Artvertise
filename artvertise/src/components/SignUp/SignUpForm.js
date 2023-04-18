@@ -20,8 +20,10 @@ function SignUpForm() {
                 <input type='text' placeholder='FirstName*' /> 
                 <input type='text' placeholder='LastName*' /> 
                 <input type='text' placeholder='Email*' />
+                <input type='text' placeholder='Country*' />
+                <input type='text' placeholder='State*' />
+                <input type='text' placeholder='City*' />
                 <input type='password' placeholder='Password*' />
-                <input type='password' placeholder='Confirm Password*' />
                 {/* <input type='checkbox' id='terms'/>
                 <label className='terms' for="terms">Agree to the terms and policies</label> */}
                 <button className='signup-button'><a href='/artists' className='artist-link'>Create Your Account</a></button>

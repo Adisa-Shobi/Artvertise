@@ -6,7 +6,7 @@ const artistsData = [
         productType: "Wall Art",
         rating: 5,
         totalSales: 1256,
-        url: '/shon',
+        url: '/artpotraits',
     },
 
     {
@@ -16,7 +16,7 @@ const artistsData = [
         productType: "Canvas Painting",
         rating: 3,
         totalSales: 556,
-        url: '',
+        url: '/artpotraits1',
     },
 
     {

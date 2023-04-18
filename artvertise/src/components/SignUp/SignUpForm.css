@@ -58,8 +58,8 @@
 }
 
 .signup-form input {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
     width: 50%;
     border-radius: .5rem;
     border: 1px solid #161616;
@@ -96,12 +96,12 @@
 @media screen and (max-width: 850px){
     .signup-form input {
         margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        width: 100%;
+        padding: 1rem;
+        width: 90%;
     }
 
     .create-account h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
     }
     

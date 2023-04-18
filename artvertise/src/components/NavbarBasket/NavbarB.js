@@ -10,7 +10,7 @@ function NavbarB() {
   return (
     <>
         <nav className='Checkout-NavbarItems'>
-            <Link to = "/" className='nav-link'>
+            <Link to = "/artists" className='nav-link'>
                 <h1 className="artists-logo">Artvertise <i className="fa-brands fa-artstation"></i> </h1>
             </Link>
 

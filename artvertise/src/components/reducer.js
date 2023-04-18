@@ -2,9 +2,9 @@ export const initialState = {
     basket: [],
 };
 
-// Selector function
+// Selector
 export const getBasketTotal = (basket) => {
-    return basket?.reduce((amount, item) => item.price + amount, 0)
+    return basket?.reduce((amount, item) => item.price + amount, 0);
 }
 
 const reducer = (state, action) => {
@@ -14,14 +14,14 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket: [...state.basket, action.item]
-            }
-        
+            };
         case "REMOVE_FROM_BASKET":
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
             );
             let newBasket = [...state.basket];
                 newBasket.splice(index, 1);
+            console.log('NEW BASKET >>>', newBasket);
 
             if (index >= 0) {
 
@@ -34,10 +34,9 @@ const reducer = (state, action) => {
                 ...state,
                 basket: newBasket
             }
-            
         default:
-            return state;
-    }
-}
+            return state
+    };
+};
 
 export default reducer;
