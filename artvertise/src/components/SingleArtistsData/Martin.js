@@ -65,7 +65,7 @@ const martinData = [
     {
         id: 592,
         name: 'Bristol street art',
-        image: 'https://images.unsplash.com/photo-1591788729297-f2fb5812a900?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/2119706/pexels-photo-2119706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of wonder and appreciation for the beauty and diversity of the natural world. It reminds us of the importance of taking care of the environment and preserving the delicate balance of the ecosystem. The image is a stunning visual representation of the natural world, and its use can inspire and uplift viewers in various contexts.',
         rating: 3,
         price: 670,
@@ -74,7 +74,7 @@ const martinData = [
     {
         id: 702,
         name: 'Sketch Art',
-        image: 'https://images.unsplash.com/photo-1595752024492-e8ceaea3efc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/3039150/pexels-photo-3039150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of connection and responsibility to the natural world. It reminds us that we are all part of a larger ecosystem, and that our actions have an impact on the health and well-being of the planet. The image is a powerful visual aid that can inspire and motivate viewers to take action towards a more sustainable and responsible way of living.',
         rating: 3,
         price: 208,
@@ -83,7 +83,7 @@ const martinData = [
     {
         id: 500,
         name: 'Sketch Art',
-        image: 'https://images.unsplash.com/photo-1558180702-95f1c3ae2ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/63238/pexels-photo-63238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of awe and wonder at the beauty and majesty of nature. It reminds us of the importance of connecting with nature and experiencing its grandeur firsthand. The image is a stunning visual representation of the natural world, and its use can inspire and uplift viewers in various contexts.',
         rating: 4,
         price: 786,
@@ -92,7 +92,7 @@ const martinData = [
     {
         id: 593,
         name: 'Arts and Culture',
-        image: 'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60',
+        image: 'https://images.pexels.com/photos/1507856/pexels-photo-1507856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of potential, creativity, and focus. It is a simple yet effective visual aid that can be used in various contexts to inspire or motivate others to express themselves through art or writing. It reminds us of the power of creativity and self-expression in promoting personal growth and fulfillment.',
         rating: 5,
         price: 675,
@@ -101,7 +101,7 @@ const martinData = [
     {
         id: 720,
         name: 'Abstract Painting',
-        image: 'https://images.pexels.com/photos/3063362/pexels-photo-3063362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        image: 'https://images.pexels.com/photos/955798/pexels-photo-955798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         about: 'This image conveys a sense of confidence, natural beauty, and authenticity. It is a versatile visual aid that can be used in various contexts to promote products, services, or ideas related to personal development, self-care, and natural beauty. It reminds us of the power of simplicity and authenticity in conveying a message or promoting a brand.',
         rating: 4,
         price: 544,
