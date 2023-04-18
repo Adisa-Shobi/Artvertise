@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
-const dbClient = require('../utils/db');
-const userController = require('../controllers/UserController');
+const UserController = require('../controllers/UserController');
+const AuthController = require('../controllers/AuthController');
 
 const router = express.Router();
 
@@ -10,10 +10,9 @@ const router = express.Router();
 *
 *
 */
-router.post('/users', (req, res) => {
-    userController.newUser(req, res);
-})
-
+router.post('/signup', (req, res) => {
+  UserController.postNew(req, res);
+});
 
 /**
 *Route uses passport local startegy to login users
@@ -21,9 +20,23 @@ router.post('/users', (req, res) => {
 *On failure it redirects to the login page
 *
 */
-router.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-}))
+router.post('/login', (req, res) => {
+  AuthController.login(req, res);
+});
+
+/**
+*Route deactivates users account
+*
+*/
+router.post('/deactivate',
+  passport.authenticate('jwt', { session: false }),
+	    AuthController.deactivate);
+
+/**
+*Route logs user out
+*/
+router.post('/logout',
+	    passport.authenticate('jwt', {session: false}),
+	    AuthController.logout)
 
 module.exports = router;

@@ -25,10 +25,15 @@ class UserController{
 	let user;
 	try {
 	    user = await dbClient.users.insertOne(
-		{ email, password: sha1password }
+		{ email, password: sha1password, active: true }
 	    )
 	} catch (err) {
 	    res.status(400).json({ error: err.message })
 	}
+
+	const userData = { id: user.insertedId, email };
+	return res.status(201).send(userData);
     }
 }
+
+module.exports = UserController;
