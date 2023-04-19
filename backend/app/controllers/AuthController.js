@@ -1,7 +1,8 @@
 const sha1 = require('sha1');
 const jwt = require('jsonwebtoken');
 const dbClient = require('../utils/db');
-const { TOKEN_SECRET } = require('../utils/config');
+
+const { TOKEN_SECRET } = process.env;
 
 class AuthController {
   static async login(req, res) {
@@ -37,7 +38,7 @@ class AuthController {
      *
      */
   static logout(req, res) {
-    res.clearCookie('jwt');
+    // res.clearCookie('jwt');
 
     res.json({ message: 'You have been logged out' });
   }

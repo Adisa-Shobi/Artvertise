@@ -10,42 +10,37 @@ const dbClient = require('./app/utils/db');
 const { ObjectId } = require('mongodb');
 
 const corsOptions = {
-  origin: 'http://localhost:8081',
-  credentials: true,
+  origin: 'http://localhost:3000',
 };
 
 const { TOKEN_SECRET } = process.env;
 
-const options = {
-  jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('Bearer'),
-    secretOrKey: TOKEN_SECRET,
-};
-
 const port = process.env.PORT || 5001;
 const app = express();
-app.use(passport.initialize());
 
-passport.use(new JwtStrategy(options, async (jwtPayload, done) => {
-  console.log(jwtPayload);
-  await dbClient.users.findOne({ _id: jwtPayload.sub }).then(
-    (user) => {
-      if (user) {
-        return done(null, user);
-      }
-      return done(null, false);
-    },
-  ).catch((err) => done(err, false));
-}));
+//passport.use(new JwtStrategy(options, async (jwtPayload, done) => {
+//  console.log(jwtPayload);
+//  await dbClient.users.findOne({ _id: jwtPayload.sub }).then(
+//    (user) => {
+//      if (user) {
+//        return done(null, user);
+//      }
+//      return done(null, false);
+//    },
+//  ).catch((err) => done(err, false));
+//}));
+require('./app/config/passport')(passport);
+app.use(passport.initialize());
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
+// Configuring CORS options
+app.use(cors());
+app.options('*', cors(corsOptions));
+
 app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
-
-// Configuring CORS options
-app.options('*', cors(corsOptions));
-app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log(`Running backend server on http://localhost${port}`);
