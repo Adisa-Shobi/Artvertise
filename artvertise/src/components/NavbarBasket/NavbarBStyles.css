@@ -1,0 +1,35 @@
+.Checkout-NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 30px;
+    background-color: #f3f2f2;
+    box-shadow: 0 0.5px 5px rgba(216, 215, 215, 0.25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    margin-bottom: 5rem;
+}
+
+.artists-logo {
+    color: #000000;
+    justify-self: start;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.fa-artstation {
+    margin-left: 0.2rem;
+    font-size: 1.6rem;
+}
+
+.nav-link {
+    text-decoration: none;
+  }

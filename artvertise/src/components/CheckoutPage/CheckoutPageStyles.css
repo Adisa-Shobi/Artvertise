@@ -1,0 +1,71 @@
+/* .Checkout-NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0.5px 5px rgba(92, 91, 91, 0.25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    margin-bottom: 5rem;
+}
+
+.checkout-logo {
+    color: #000000;
+    justify-self: start;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.fa-artstation {
+    margin-left: 0.2rem;
+    font-size: 1.6rem;
+} */
+
+.checkout {
+    margin-top: 5rem;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+}
+
+.checkout__ad {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.checkout__title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    text-align: start;
+}
+
+@media screen and (max-width: 850px) {
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .checkout__right {
+        margin-top: 1rem;
+    }
+
+    .checkout__title{
+        font-size: larger;
+    }
+}
+
