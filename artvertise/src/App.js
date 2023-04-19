@@ -16,11 +16,11 @@ import Footer from './components/Footer/Footer';
 import SingleArtistPage, { SingleArtistPageDids, SingleArtistPageGulsik, SingleArtistPageMartin, SingleArtistPageMatheus, SingleArtistPageSteve, SingleArtistPageWallace } from './routes/SingleArtistPage';
 import Checkout from './routes/Checkout';
 import Payment from './routes/Payment';
+import AuthService from './Services/auth.service.js'
 // import SingleArtistPageOne from './routes/SingleArtistPageOne';
 
 function App() {
   return (
-    
     <Router>
     <div className='App'>
       <Switch>
