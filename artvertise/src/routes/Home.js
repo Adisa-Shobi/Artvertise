@@ -23,8 +23,8 @@ function Home() {
           btnClass="show"
         />
         {/* <Main /> */}
-        <Work />
         <Potraits />
+        <Work />
         <Testimonials />
         <Footer />
     </>

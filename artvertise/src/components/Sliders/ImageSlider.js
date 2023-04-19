@@ -49,8 +49,14 @@ const dotStyle = {
 };
 
 const headerStyle = {
-    marginBottom: "10px"
+    marginBottom: "7px",
+
 }
+
+const paragraphStyle = {
+  marginBottom: "5px"
+}
+
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,6 +81,7 @@ const ImageSlider = ({ slides }) => {
   return (
     <>
         <h2 style={headerStyle}>Art Potrait Display Slides</h2>
+        <p style={paragraphStyle}>Some of the Artwork Available in Artvertise</p>
         
         <div style={sliderStyles}>
         <div>
