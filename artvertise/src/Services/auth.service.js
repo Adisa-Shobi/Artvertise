@@ -16,9 +16,7 @@ class AuthService {
 	    method: 'POST',
 	    body: JSON.stringify({ email, password }),
 	    headers: header,
-	}).then((response) => response.json()).then((data) => {
-	    return data;
-	}).catch((err) => {
+	}).then((response) => response).catch((err) => {
 	    console.log(err.message)
 	    return;
 	});
