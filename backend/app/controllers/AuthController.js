@@ -9,7 +9,7 @@ class AuthController {
 
     if (!email || !password) {
       return res.status(404).json(
-        { error: 'email/password not fount' },
+        { error: 'email/password not found' },
       );
     }
 
@@ -26,7 +26,7 @@ class AuthController {
 
     if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
 
-    const token = jwt.sign({ userId: user._id.toString() }, TOKEN_SECRET);
+      const token = jwt.sign({ sub: user._id, iat: Date.now() }, TOKEN_SECRET);
     console.log(user._id);
 
     return res.json({ token });

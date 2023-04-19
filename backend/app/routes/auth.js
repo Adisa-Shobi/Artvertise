@@ -29,8 +29,7 @@ router.post('/login', (req, res) => {
 *Route deactivates users account
 *
 */
-router.post('/deactivate',
-	    passport.authenticate('jwt', { session: false }),
+router.post('/deactivate', passport.authenticate('jwt', { session: false }),
 	    AuthController.deactivate);
 
 /**
