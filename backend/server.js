@@ -19,14 +19,9 @@ const options = {
   secretOrKey: TOKEN_SECRET,
 };
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 const app = express();
 
-// Configuring CORS options
-app.options('*', cors(corsOptions));
-app.use(cors(corsOptions));
-
-app.use(express.json());
 passport.use(new JwtStrategy(options, async (jwtPayload, done) => {
   console.log(jwtPayload);
   await dbClient.users.findOne({ _id: jwtPayload.sub }).then(
@@ -40,8 +35,15 @@ passport.use(new JwtStrategy(options, async (jwtPayload, done) => {
 }));
 app.use(passport.initialize());
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
+
 app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
+
+// Configuring CORS options
+app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log(`Running backend server on http://localhost${port}`);
