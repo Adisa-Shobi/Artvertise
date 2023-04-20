@@ -20,6 +20,12 @@ class DBClient {
           this.client = client;
           this.db = this.client.db(DB_NAME);
           this.users = this.db.collection('users');
+          this.items = this.db.collection('items');
+          this.cities = this.db.collection('cities');
+          this.states = this.db.collection('states');
+          this.users = this.db.collection('users');
+          this.countries = this.db.collection('countries');
+          this.feedback = this.db.collection('feedback');
           this.failed = false;
         } else {
           console.log(err.message);

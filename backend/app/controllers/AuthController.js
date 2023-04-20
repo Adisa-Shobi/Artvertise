@@ -25,12 +25,18 @@ class AuthController {
 
     if (!user) return res.status(404).json({ error: 'Invalid Email or Password' });
 
-    if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
+      if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
 
       const token = jwt.sign({ sub: user._id, iat: Date.now() }, TOKEN_SECRET);
-    console.log(user._id);
+      console.log(user._id);
 
-    return res.json({ token });
+      user.token = "Bearer " + token;
+
+      const res_data = {
+	  success: "ok",
+	  user
+      }
+    return res.json(res_data);
   }
 
   /**
@@ -39,8 +45,8 @@ class AuthController {
      */
   static logout(req, res) {
     // res.clearCookie('jwt');
-
-    res.json({ message: 'You have been logged out' });
+      console.log("You have been authorized")
+    return res.json({ message: 'You have been logged out' });
   }
 
   /**

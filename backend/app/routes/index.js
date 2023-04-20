@@ -12,4 +12,7 @@ router.get('/', (req, res) => {
   res.send('Welcome to Artvertise');
 });
 
+// Routes for handling item objects
+router.get('/items', )
+
 module.exports = router;

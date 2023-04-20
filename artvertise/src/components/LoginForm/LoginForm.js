@@ -13,13 +13,13 @@ function LoginForm() {
 
 
      const handleSubmit = async (event) => {
-    event.preventDefault();
+	 event.preventDefault();
     try {
       const response = await AuthService.login(email, password);
 	if (response.status === 200)
 	{
-	    const user = await response.json();
-	    StorageService.saveUser(user);
+	    const data = await response.json();
+	    StorageService.saveUser(data.user);
 	    history.push('/artists');
 	} else {
 	    const data = await response.json()
