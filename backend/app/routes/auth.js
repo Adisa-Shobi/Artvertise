@@ -30,7 +30,7 @@ router.post('/login', (req, res) => {
 *Route deactivates users account
 *
 */
-router.post('/deactivate', authJwt.verifyToken, AuthController.deactivate);
+router.post('/deactivate', jwtAuth, AuthController.deactivate);
 
 /**
 *Route logs user out
