@@ -25,18 +25,19 @@ class AuthController {
 
     if (!user) return res.status(404).json({ error: 'Invalid Email or Password' });
 
-      if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
+    if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
 
-      const token = jwt.sign({ sub: user._id, iat: Date.now() }, TOKEN_SECRET);
-      console.log(user._id);
+    const token = jwt.sign({ sub: user._id, iat: Date.now() }, TOKEN_SECRET);
+    console.log(user._id);
 
-      user.token = "Bearer " + token;
+    user.token = `Bearer ${token}`;
+    delete user.password;
 
-      const res_data = {
-	  success: "ok",
-	  user
-      }
-    return res.json(res_data);
+    const resData = {
+      success: 'ok',
+      user,
+    };
+    return res.json(resData);
   }
 
   /**
@@ -45,7 +46,7 @@ class AuthController {
      */
   static logout(req, res) {
     // res.clearCookie('jwt');
-      console.log("You have been authorized")
+    console.log('You have been authorized');
     return res.json({ message: 'You have been logged out' });
   }
 
@@ -53,8 +54,8 @@ class AuthController {
      *Deactivates account till user reactivates it
      *
      */
-    static async deactivate(req, res) {
-	console.log(req);
+  static async deactivate(req, res) {
+    console.log(req);
     const { email } = req.body;
 
     if (!email) return res.status(404).json({ error: 'Email not found' });
