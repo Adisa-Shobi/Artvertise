@@ -2,7 +2,6 @@ const express = require('express');
 const passport = require('passport');
 const UserController = require('../controllers/UserController');
 const AuthController = require('../controllers/AuthController');
-const authJwt = require('../middlewares/authJwt')
 
 const router = express.Router();
 const jwtAuth = passport.authenticate('jwt', { session: false });
