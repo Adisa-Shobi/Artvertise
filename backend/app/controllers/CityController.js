@@ -10,7 +10,7 @@ class CityController {
     const { name, stateId, countryId } = req.body;
 
     if (!name || !stateId || !countryId) {
-      res.status(400).json({ error: 'Invlid arguments supplied' });
+      res.status(400).json({ error: 'Invalid arguments supplied' });
     }
 
     try {
@@ -33,9 +33,10 @@ class CityController {
       return res.status(500).json({ error: err.message });
     }
 
-    city = Tools.prepJSON(city);
+    const cityData = city.ops;
+    const filteredData = Tools.prepJSON(cityData);
 
-    return res.json(city);
+    return res.json(filteredData);
   }
 
   /**

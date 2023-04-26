@@ -27,7 +27,11 @@ class AuthController {
 
     if (!user.active) return res.status(404).json({ error: 'User Deactivated' });
 
-    const token = jwt.sign({ sub: user._id, iat: Date.now() }, TOKEN_SECRET);
+      const token = jwt.sign(
+	  { sub: user._id, iat: Date.now() },
+	  TOKEN_SECRET,
+	  { expiresIn: '12h' }
+      );
     console.log(user._id);
 
     user.token = `Bearer ${token}`;
