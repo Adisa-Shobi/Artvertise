@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import './SignUpForm.css';
 import { Link } from 'react-router-dom';
 import AuthService from '../../Services/auth.service';
 import StorageService from '../../utils/storage.utils';
 
 function SignUpForm() {
-  const history = useHistory();
+  // const history = useHistory();
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -15,6 +15,8 @@ function SignUpForm() {
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
   const [password, setPassword] = useState('');
+
+  console.log(password);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,14 +31,15 @@ function SignUpForm() {
         city
       );
       console.log(response); // handle response
-      if(response === 200) {
+      if(response.ok) {
         StorageService.setUser(response.data.json());
-        history.push('/artists')
+        //history.push('/artists')
+        window.location.href = '/artists';
       } else {
         alert(response.message)
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 
@@ -103,7 +106,7 @@ function SignUpForm() {
             required
             onChange={(event) => setPassword(event.target.value)}
           />
-          <button className='signup-button'><a href='/artists' className='artist-link'>Create Your Account</a></button>
+          <button className='signup-button' type='submit'>Create Your Account</button>
         </form>
         <p className="redirect-signin">
           Already you have an account? <a href="/login">Sign-in</a>
