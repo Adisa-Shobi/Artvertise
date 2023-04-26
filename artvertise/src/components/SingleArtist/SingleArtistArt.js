@@ -1,6 +1,6 @@
 import React from 'react'
 import './SingleArtistStyles.css'
-import { FaStar } from 'react-icons/fa';
+// import { FaStar } from 'react-icons/fa';
 //import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import NavbarB from '../NavbarBasket/NavbarB';
@@ -54,9 +54,9 @@ function SingleArtistArt(props) {
                     </div>
                     <div className='displayStack__2'>
                         <div className='artistsRating'>
-                            {[...Array(props.rating)].map((index) => (
-                                <FaStar id={index + 1 } key={index} />
-                            ))}
+                            {Array(props.rating).fill().map((_, i) => (
+                                    <p>⭐️</p>
+                                ))}
                         </div>
                     </div>
                     <button className='viewArt-button' onClick={addToBasket}>Add to Cart</button>
