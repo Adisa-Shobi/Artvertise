@@ -40,6 +40,23 @@
     font-size: xx-large;
 }
 
+.payment__priceContainer {
+    margin-top: 15px;
+    text-align: start;
+}
+
+.payment__details > form > div > button {
+    background: #b2830b;
+    color: #fff;
+    border-radius: 5px;
+    width: 35%;
+    padding: 15px;
+    border: 1px solid;
+    font-weight: bolder;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
 @media screen and (max-width: 850px) {
     .payment__section {
         flex-direction: column;
