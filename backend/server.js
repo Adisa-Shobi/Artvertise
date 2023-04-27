@@ -29,7 +29,7 @@ app.options('*', cors(corsOptions));
 
 app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
-app.use('/api/payment', paymentStripeRouter);
+app.use(paymentStripeRouter);
 
 app.listen(port, () => {
   console.log(`Running backend server on http://localhost${port}`);
