@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './SignUpForm.css';
 import { Link } from 'react-router-dom';
 import AuthService from '../../Services/auth.service';
-import StorageService from '../../utils/storage.utils';
+// import StorageService from '../../utils/storage.utils';
 
 function SignUpForm() {
   // const history = useHistory();
@@ -32,9 +32,12 @@ function SignUpForm() {
       );
       console.log(response); // handle response
       if(response.ok) {
-        StorageService.setUser(response.data.json());
+        // console.log("Storing Data >>>", response.body)
+        // StorageService.setUser(response.data.json());
         //history.push('/artists')
-        window.location.href = '/artists';
+
+        console.log('Redirecting to the artists Page ...')
+        window.location.href = '/login';
       } else {
         alert(response.message)
       }

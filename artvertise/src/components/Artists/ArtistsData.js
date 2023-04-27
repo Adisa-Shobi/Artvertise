@@ -6,7 +6,6 @@ const artistsData = [
         productType: "Wall Art",
         rating: 5,
         totalSales: 1256,
-        url: '/artpotraits',
     },
 
     {
@@ -16,7 +15,6 @@ const artistsData = [
         productType: "Canvas Painting",
         rating: 3,
         totalSales: 556,
-        url: '/artpotraits1',
     },
 
     {
@@ -26,7 +24,6 @@ const artistsData = [
         productType: "Painting",
         rating: 4,
         totalSales: 775,
-        url: '',
     },
 
     {
@@ -36,7 +33,6 @@ const artistsData = [
         productType: "Painting",
         rating: 4,
         totalSales: 1076,
-        url: '',
     },
 
     {
@@ -46,7 +42,6 @@ const artistsData = [
         productType: "Painting",
         rating: 2,
         totalSales: 76,
-        url: '',
     },
 
     {
@@ -56,7 +51,6 @@ const artistsData = [
         productType: "Painting",
         rating: 3,
         totalSales: 872,
-        url: '',
     },
 
     {
@@ -66,7 +60,6 @@ const artistsData = [
         productType: "Absrtact Painting",
         rating: 4,
         totalSales: 1009,
-        url: '',
     },
 
     {
@@ -76,7 +69,6 @@ const artistsData = [
         productType: "Painting",
         rating: 5,
         totalSales: 1196,
-        url: '',
     },
 
     {
@@ -86,7 +78,6 @@ const artistsData = [
         productType: "Painting",
         rating: 4,
         totalSales: 1076,
-        url: '',
     },
 
     {
@@ -96,7 +87,6 @@ const artistsData = [
         productType: "Color Painting",
         rating: 3,
         totalSales: 594,
-        url: '',
     },
 
     {
@@ -106,7 +96,6 @@ const artistsData = [
         productType: "Painting",
         rating: 4,
         totalSales: 389,
-        url: '',
     },
 
     {
@@ -116,7 +105,6 @@ const artistsData = [
         productType: "Painting",
         rating: 4,
         totalSales: 783,
-        url: '',
     },
 ];
 

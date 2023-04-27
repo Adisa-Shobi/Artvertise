@@ -4,10 +4,16 @@ import NavbarB from '../NavbarBasket/NavbarB'
 import CheckoutProduct from '../CheckoutProducts/CheckoutProduct'
 import { useStateValue } from '../StateProvider';
 import { Link } from 'react-router-dom';
+import StorageService from '../../utils/storage.utils';
 
 function PaymentComp() {
   // eslint-disable-next-line
   const [{basket}, dispatch] = useStateValue();
+
+  const user = StorageService.getUser();
+  console.log(user);
+
+
   return (
     <div className='payment'>
         <NavbarB />
@@ -21,9 +27,9 @@ function PaymentComp() {
                     <h3>Delivery Address</h3>
                 </div>
                 <div className='payment__address'>
-                    {/* <p>{user?.email}</p> */}
-                    <p>Mbagathi Road - Langata</p>
-                    <p>Nairobi, Kenya</p>
+                    <p>{user?.email}</p>
+                    <p>{user?.firstName} {user?.lastName}</p>
+                    <p>{user?.country} : {user?.state} - {user?.city}</p>
                 </div>
             </div>
         </div>
