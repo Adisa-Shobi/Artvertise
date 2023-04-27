@@ -27,7 +27,13 @@ app.use(express.urlencoded({extended: true}))
 app.use(cors());
 app.options('*', cors(corsOptions));
 
-app.use('/api/', indexRouter);
+// Initialize Passport Authentication
+const jwtAuth = passport.authenticate('jwt', { session: false });
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Artvertise');
+});
+app.use('/api/', jwtAuth, indexRouter);
 app.use('/api/auth', authRouter);
 app.use(paymentStripeRouter);
 

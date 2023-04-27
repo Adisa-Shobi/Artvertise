@@ -78,6 +78,30 @@ class Tools {
 
     return true;
   }
+
+  static async isUser(userId) {
+    const user = await dbClient.users.findOne(
+      { _id: ObjectId(userId) },
+    );
+
+    if (!user) {
+      return false;
+    }
+
+    return true;
+  }
+
+  static async isItem(itemId) {
+    const item = await dbClient.items.findOne(
+      { _id: ObjectId(itemId) },
+    );
+
+    if (!item) {
+      return false;
+    }
+
+    return true;
+  }
 }
 
 module.exports = Tools;

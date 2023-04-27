@@ -172,6 +172,53 @@ class ItemController {
 
     return res.json(result.result);
   }
+
+  /**
+     *Retrieves the average rating of an item
+     */
+  static async getRating(req, res) {
+    const { itemId } = req.params;
+
+    if (!itemId) {
+	    return res.status(400).json({ error: 'Invalid itemId' });
+    }
+
+    let result;
+    try {
+	    result = await dbclient.reviews.aggregate([
+        {
+          $group:
+		  {
+		      id: null,
+		      average: { $avg: '$rating' },
+		  },
+        },
+	    ]);
+    } catch (err) {
+	    return res.status(500).json({ error: err.message });
+    }
+
+    result = await result.toArray();
+    return res.json(result);
+  }
+
+  static async getItemReviews(req, res) {
+    const { page = 0 } = req.query;
+    const { itemId } = req.params;
+
+    const itemPage = dbClient.reviews.aggregate([
+	    { $match: { itemId } },
+	    { $sort: { createdAt: -1 } },
+	    { $skip: parseInt(page, 10) * 10 },
+	    { $limit: 10 },
+    ]);
+
+    const itemData = await itemPage.toArray();
+
+    const filteredData = itemData.map((current) => Tools.prepJSON(current));
+
+    return res.json(filteredData);
+  }
 }
 
 module.exports = ItemController;

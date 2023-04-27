@@ -35,7 +35,7 @@ class StateController {
       return res.status(500).json({ error: err.message });
     }
 
-    state = Tools.prepJSON(state);
+    state = Tools.prepJSON(state.ops);
     return res.json(state);
   }
 
@@ -154,17 +154,27 @@ class StateController {
      */
   static async getStateCities(req, res) {
     const { stateId } = req.params;
+    const { page = 0 } = req.query;
 
-    let cities;
+    const query = { stateId };
+
+    let cityPage;
     try {
-      cities = await dbClient.cities.find(
-        { stateId },
-      );
+      cityPage = dbClient.cities.aggregate([
+        { $match: query },
+        { $sort: { createdAt: -1 } },
+        { $skip: parseInt(page, 10) * 10 },
+        { $limit: 10 },
+      ]);
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
 
-    return res.json(cities);
+    const cityData = await cityPage.toArray();
+
+    const filteredData = cityData.map((current) => Tools.prepJSON(current));
+
+    return res.json(filteredData);
   }
 
   /**

@@ -109,17 +109,26 @@ class UserController {
      */
   static async getUserItems(req, res) {
     const { userId } = req.params;
+    const { page = 0 } = req.query;
 
-    let items;
+    const query = { userId };
+
+    let itemPage;
     try {
-      items = await dbClient.items.find(
-        { userId },
-      );
+      itemPage = dbClient.items.aggregate([
+        { $match: query },
+        { $sort: { createdAt: -1 } },
+        { $skip: parseInt(page, 10) * 10 },
+        { $limit: 10 },
+      ]);
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
 
-    return res.json(items);
+    const itemData = await itemPage.toArray();
+
+    const filteredData = itemData.map((current) => Tools.prepJSON(current));
+    return res.json(filteredData);
   }
 
   /**
@@ -193,6 +202,24 @@ class UserController {
     }
 
     return res.json(result.result);
+  }
+
+  static async getUserReviews(req, res) {
+    const { page = 0 } = req.query;
+    const { userId } = req.params;
+
+    const itemPage = dbClient.reviews.aggregate([
+      { $match: { userId } },
+      { $sort: { createdAt: -1 } },
+      { $skip: parseInt(page, 10) * 10 },
+      { $limit: 10 },
+    ]);
+
+    const itemData = await itemPage.toArray();
+
+    const filteredData = itemData.map((current) => Tools.prepJSON(current));
+
+    return res.json(filteredData);
   }
 }
 
