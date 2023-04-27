@@ -1,6 +1,6 @@
 # Artvertise
 
-![HOME PAGE](./artvertise/src/images/homepage.png);
+![HOME PAGE](./artvertise/src/images/homepage.png)
 
 ### Introduction
 
@@ -14,30 +14,49 @@ The conventional auction house system has inherent problems, and there is a need
 
 ### Development Architecture
 
-Frontend- React, Redux, HTML, CSS, Javascript
-Backend (API): Node js-Express
-Backend (Database)- MongoDB
-Thrid Party API - Stripe API
+- Frontend:
+
+  - React
+  - Redux
+  - HTML
+  - CSS
+  - Javascript
+
+- Backend (API):
+
+  - Node js
+  - Express
+
+- Backend (Database):
+
+  - MongoDB
+
+- Thrid Party API:
+  - Stripe API
 
 #### Backend (API)
 
-A. Authentication-
-Allow the user to authenticate to App
-/login/username/ POST
+1. Authentication
 
-B. bid_offers (GET)
-List bids all bid/auction.
-/{token}/bid_offers GET
-/{token}/bid_offers?since={timestamp} GET
+- Allow the user to authenticate to App: /login/username/ POST
 
-C. Bid_offer (GET)
-Show a particular bid offer
-/{token}/bid_offer/{id} GET
+2. bid_offers (GET)
 
-D. bid_offer (POST)
-Submit a response against a particular bid offer for this.
-/{token}/bid_offer/{id} POST
+- List bids all bid/auction:
+  /{token}/bid_offers GET
+  /{token}/bid_offers?since={timestamp} GET
 
-E. bid_withdraw (POST)
-Withdraw a response against a particular bid offer.
-/{token}/withdraw/{uuid} POST
+3. Bid_offer (GET)
+
+- Show a particular bid offer:
+  /{token}/bid_offer/{id} GET
+
+4. bid_offer (POST):
+
+- Submit a response against a particular bid offer for this.
+  /{token}/bid_offer/{id} POST
+
+5. bid_withdraw (POST):
+
+- Withdraw a response against a particular bid offer.
+  /{token}/withdraw/{uuid} POST
