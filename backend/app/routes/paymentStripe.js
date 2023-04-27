@@ -1,6 +1,6 @@
 const Stripe = require('stripe')(process.env.SECRET_KEY);
 
-app.post('/payment', async (req, res) => {
+app.post('/api/payment', async (req, res) => {
   let status, error;
   const { token, amount } = req.body;
   console.log(token);
