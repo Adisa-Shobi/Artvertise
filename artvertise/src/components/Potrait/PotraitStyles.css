@@ -29,10 +29,14 @@
 }
 
 .p-image {
-
-
     transition: 0.3s ease-in-out;
     border-radius: 7px;
+    object-fit: cover;
+}
+
+.potrait-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
