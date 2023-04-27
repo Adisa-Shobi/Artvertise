@@ -16,14 +16,45 @@ import Footer from './components/Footer/Footer';
 import SingleArtistPage, { SingleArtistPageDids, SingleArtistPageGulsik, SingleArtistPageMartin, SingleArtistPageMatheus, SingleArtistPageSteve, SingleArtistPageWallace } from './routes/SingleArtistPage';
 import Checkout from './routes/Checkout';
 import Payment from './routes/Payment';
-import AuthService from './Services/auth.service.js'
+import UploadArtPage from './routes/UploadArtPage';
+import User from './routes/User';
+// import { useEffect } from 'react';
+// import StorageService from './utils/storage.utils';
+// import { useStateValue } from './components/StateProvider';
+// import AuthService from './Services/auth.service.js'
 // import SingleArtistPageOne from './routes/SingleArtistPageOne';
 
 function App() {
+
+  // eslint-disable-next-line
+  // const [{}, dispatch] = useStateValue();
+
+  // useEffect(() => {
+  //   const authUser = StorageService.getUser();
+  //   if (authUser) {
+  //     dispatch({
+  //       type: 'SET_USER',
+  //       user: authUser,
+  //     })
+  //   } else {
+  //     dispatch({
+  //       type: 'SET_USER',
+  //       user: null
+  //     })
+  //   }
+  //   // eslint-disable-next-line
+  // }, [])
   return (
     <Router>
     <div className='App'>
       <Switch>
+      <Route path='/userprofile'>
+            <User />
+          </Route>
+      <Route path='/uploadart'>
+            <UploadArtPage />
+          </Route>
+
       <Route path='/payment'>
             <Payment />
             <Footer />

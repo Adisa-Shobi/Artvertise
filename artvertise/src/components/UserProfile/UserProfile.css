@@ -1,0 +1,41 @@
+.user {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.user-profile {
+    width: 400px;
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.user-label {
+    font-weight: bold;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.user-value {
+    flex: 1;
+}
+
+.profile-img {
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 800px) {
+    .user {
+        display: flex;
+        flex-direction: column;
+    }
+}
+  

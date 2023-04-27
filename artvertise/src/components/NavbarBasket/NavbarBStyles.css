@@ -30,6 +30,10 @@
     font-size: 1.6rem;
 }
 
+.fa-user-circle {
+    margin-right: 15px;
+}
+
 .nav-link {
     text-decoration: none;
   }
