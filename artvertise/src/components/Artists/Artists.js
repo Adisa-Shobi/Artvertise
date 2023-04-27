@@ -37,9 +37,9 @@ function Artists({ id, image, name, totalSales, rating }) {
     return (
         <div>
             <nav className='Artists-NavbarItems'>
-                <Link to='/' className='nav-link'>
-                    <h1 className="artists-logo">Artvertise <i className="fa-brands fa-artstation"></i> </h1>
-                </Link>
+                
+                <h1 className="artists-logo">Artvertise <i className="fa-brands fa-artstation"></i> </h1>
+               
                 <Link to={!user?.firstName ? '/login': '/uploadart'} className='nav-link'>
                     <i className='fa-solid fa-upload'> Upload Art</i>
                 </Link>
