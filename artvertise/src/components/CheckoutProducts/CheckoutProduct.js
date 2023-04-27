@@ -4,7 +4,7 @@ import { useStateValue } from '../StateProvider';
 //import { FaStar } from 'react-icons/fa';
 
 
-function CheckoutProduct({ id, image, name, price, rating }) {
+function CheckoutProduct({ id, image, name, price, rating, hideButton }) {
 
   // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
@@ -31,7 +31,9 @@ function CheckoutProduct({ id, image, name, price, rating }) {
                         <p>⭐️</p>
                     ))}
             </div>
-            <button onClick={removeFromBasket}>Remove from Basket</button>
+            {!hideButton && (
+                <button onClick={removeFromBasket}>Remove from Basket</button>
+            )}
         </div>
     </div>
   )
