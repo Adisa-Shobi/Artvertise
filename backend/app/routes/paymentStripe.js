@@ -1,9 +1,9 @@
-
+const express = require('express');
 const router = express.Router();
 
 const Stripe = require('stripe')(process.env.SECRET_KEY);
 
-app.post('/api/payment', async (req, res) => {
+router.post('/payment', async (req, res) => {
   let status, error;
   const { token, amount } = req.body;
   console.log(token);
@@ -20,3 +20,6 @@ app.post('/api/payment', async (req, res) => {
   }
   res.json({ error, status });
 });
+
+
+module.exports = router;
