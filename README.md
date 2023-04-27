@@ -1,6 +1,6 @@
 # Artvertise
 
-![Banner Image](https://imgur.com/JybHihN)
+![HOME PAGE](./artvertise/src/images/homepage.png);
 
 ### Introduction
 
@@ -10,7 +10,7 @@ The "Art work Auction App" is an online platform that aims to provide an online 
 
 The conventional auction house system has inherent problems, and there is a need for an online auction management system that can provide a better experience for both buyers and sellers. The problem is that the existing system is not user-friendly and is limited in scope, making it difficult for users to navigate through the products and participate in the auctions. The proposed solution is to develop a web portal that can provide a seamless and efficient platform for buyers and sellers to interact and transact. The system will allow users to sign up, browse through products by category, and place bids on products they are interested in. The web portal will also have an administrator who can manage the system and authenticate users and products.
 
-![Banner Image](https://imgur.com/wdrpLsf)
+![Banner Image](./artvertise/src/images/artuploaded.png)
 
 ### Development Architecture
 
