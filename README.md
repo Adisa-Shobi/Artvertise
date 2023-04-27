@@ -53,10 +53,23 @@ The conventional auction house system has inherent problems, and there is a need
 
 4. bid_offer (POST):
 
-- Submit a response against a particular bid offer for this.
+- Submit a response against a particular bid offer for this:
   /{token}/bid_offer/{id} POST
 
 5. bid_withdraw (POST):
 
-- Withdraw a response against a particular bid offer.
+- Withdraw a response against a particular bid offer:
   /{token}/withdraw/{uuid} POST
+
+#### Authors
+
+- [Jemimah Mmboga](mmbogajemimah@gmail.com)
+
+  - Frontend Development
+
+- [Shobi Ola Adisa](s.oadisa.dev@gmail.com)
+
+  - Backend Development
+
+- [Seth Kwame](kseth8919@gmail.com)
+  - Backend Development
