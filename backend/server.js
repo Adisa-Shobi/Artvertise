@@ -3,6 +3,7 @@ const cors = require('cors');
 const passport = require('passport');
 const indexRouter = require('./app/routes/index');
 const authRouter = require('./app/routes/auth');
+const paymentStripeRouter = require('./app/routes/paymentStripe');
 
 
 
@@ -28,6 +29,7 @@ app.options('*', cors(corsOptions));
 
 app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/payment', paymentStripeRouter);
 
 app.listen(port, () => {
   console.log(`Running backend server on http://localhost${port}`);
