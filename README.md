@@ -95,7 +95,7 @@ To get frontend up and running, start the react application:
 ```
 npm start
 ``` 
-![HOME PAGE](./artvertise/src/images/homepage.png)
+![HOME PAGE](./artvertise/src/images/localhost_3000_.png)
 
 <!-- CONFIGURATION -->
 ## Configuration
