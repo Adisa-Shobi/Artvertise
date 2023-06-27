@@ -12,6 +12,7 @@ const jwtAuth = passport.authenticate('jwt', { session: false });
 *
 */
 router.post('/signup', (req, res) => {
+    console.log("called");
   UserController.postNew(req, res);
 });
 

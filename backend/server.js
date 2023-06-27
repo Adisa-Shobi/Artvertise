@@ -33,10 +33,10 @@ const jwtAuth = passport.authenticate('jwt', { session: false });
 app.get('/', (req, res) => {
   res.send('Welcome to Artvertise');
 });
-app.use('/api/', jwtAuth, indexRouter);
+app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
 app.use(paymentStripeRouter);
 
 app.listen(port, () => {
-  console.log(`Running backend server on http://localhost${port}`);
+  console.log(`Running backend server on http://localhost:${port}`);
 });
