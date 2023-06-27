@@ -35,7 +35,7 @@ An online marketplace for showcasing, selling, and bidding on art
 - [License](#license)
 
 <!-- INTRODUCTION -->
-## Introduction
+## Introduction 👋
 
 Artvertise is an open-source e-commerce web application that aims to create a collaborative and inclusive platform for artists and art enthusiasts. The project focuses on facilitating the buying and selling of art in a seamless and user-friendly manner.
 
@@ -46,7 +46,7 @@ Key Features:
 - Secure Transactions: Artvertise ensures secure transactions between buyers and sellers, protecting the interests of both parties involved.
 
 <!-- INSTALLATION -->
-## Installation
+## Installation 📥
 
 To get started, clone the repository:
 ```
@@ -54,7 +54,7 @@ git clone https://github.com/Adisa-Shobi/Artvertise.git
 ```
 ### Backend
 
-Navigate to the backend directory
+Navigate to the backend directory.
 ```
 cd backend
 ```
@@ -64,7 +64,7 @@ npm install
 ```
 
 <!-- USAGE -->
-## Usage
+## Usage 💻
 
 To get everything running, start up the express server by running
 ```
@@ -98,7 +98,7 @@ npm start
 ![HOME PAGE](./artvertise/src/images/localhost_3000_.png)
 
 <!-- CONFIGURATION -->
-## Configuration
+## Configuration 🔧
 
 Configure `TOKEN_SECRET` as an environment variable
 
@@ -107,12 +107,12 @@ export TOKEN_SECRET=your_token_secret_value
 ```
 
 <!-- DOCUMENTATION -->
-## Documentation
+## Documentation 📑
 
 Full API documentation can be found [here.](https://documenter.getpostman.com/view/16948564/2s93Y5NzbR) 
 
 <!-- AUTHORS -->
-## Authors
+## Authors 👥
 
 | Author          | Role               | Contact                 |
 |-----------------|--------------------|-------------------------|
@@ -121,12 +121,12 @@ Full API documentation can be found [here.](https://documenter.getpostman.com/vi
 | Seth Kwame      | Backend Developer  | kseth8919@gmail.com     |          
 
 <!-- Reporting -->
-## Reporting
+## Reporting 🚨
 
 Feel free to [open an issue](https://github.com/Adisa-Shobi/Artvertise/issues) on GitHub if you find any bugs.
 
 <!-- LICENSE -->
-## License
+## License 📜
 
 This open-source software is licensed under the [MIT License](https://github.com/PawanKolhe/color-calendar/blob/master/LICENSE).
 
