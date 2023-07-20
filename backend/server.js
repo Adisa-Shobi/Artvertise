@@ -13,7 +13,7 @@ const corsOptions = {
 
 const { TOKEN_SECRET } = process.env;
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 3000;
 const app = express();
 
 // Passport strategy initialized
