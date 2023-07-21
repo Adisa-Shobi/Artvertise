@@ -22,7 +22,7 @@ function LoginForm() {
 		//console.log('USER JSON ----->', response.success)
 
 		if(response.ok) {
-			const data = await response.data.user;
+		    const data = await response.data.json();
 			console.log(data)
 			StorageService.saveUser(data)
 			console.log("about to redirect to /artists");
