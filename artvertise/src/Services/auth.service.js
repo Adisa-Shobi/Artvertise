@@ -11,9 +11,6 @@ class AuthService {
 			body: JSON.stringify({ email, password }),
 			headers: header,
 		  });
-		  if (!response.ok) {
-			throw new Error('Failed to login');
-		  }
 		  return response;
 		} catch (err) {
 		  console.log(err.message);
