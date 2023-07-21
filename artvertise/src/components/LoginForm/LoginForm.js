@@ -24,7 +24,7 @@ function LoginForm() {
 		if(response.ok) {
 		    const data = await response.json();
 			console.log(data)
-			StorageService.saveUser(data)
+			StorageService.saveUser(data.user)
 			console.log("about to redirect to /artists");
 
 			history.push('/artists')
