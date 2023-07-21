@@ -8,7 +8,7 @@ const paymentStripeRouter = require('./app/routes/paymentStripe');
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://artvertise.onrender.com',
 };
 
 const { TOKEN_SECRET } = process.env;
