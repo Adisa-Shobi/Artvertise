@@ -14,8 +14,7 @@ class AuthService {
 		  if (!response.ok) {
 			throw new Error('Failed to login');
 		  }
-		  const data = await response.json();
-		  return data;
+		  return response;
 		} catch (err) {
 		  console.log(err.message);
 		  return null;
