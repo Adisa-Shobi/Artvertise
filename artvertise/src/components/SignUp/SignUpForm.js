@@ -30,7 +30,7 @@ function SignUpForm() {
         state,
         city
       );
-      console.log(response); // handle response
+	console.log(response.json()); // handle response
       if(response.ok) {
         // console.log("Storing Data >>>", response.body)
         // StorageService.setUser(response.data.json());
