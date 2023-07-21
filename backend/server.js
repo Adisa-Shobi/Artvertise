@@ -13,7 +13,7 @@ const corsOptions = {
 
 const { TOKEN_SECRET } = process.env;
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 // Passport strategy initialized
@@ -40,3 +40,5 @@ app.use(paymentStripeRouter);
 app.listen(port, () => {
   console.log(`Running backend server on http://localhost:${port}`);
 });
+
+export default app
