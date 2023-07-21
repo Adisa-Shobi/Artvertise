@@ -22,7 +22,7 @@ function LoginForm() {
 		//console.log('USER JSON ----->', response.success)
 
 		if(response.ok) {
-			const data = await response.user;
+			const data = await response.data.user;
 			console.log(data)
 			StorageService.saveUser(data)
 			console.log("about to redirect to /artists");
@@ -32,8 +32,7 @@ function LoginForm() {
 			// window.location.href = '/artists';
 		} else {
 			// const data = await response.user
-	    	// alert(data.error);
-			alert("Cannot login")
+	    	alert(response.data.error);
 		} 
 	} catch (error) {
 		console.error(error)
