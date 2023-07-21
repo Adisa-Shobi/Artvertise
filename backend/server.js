@@ -37,8 +37,8 @@ app.use('/api/', indexRouter);
 app.use('/api/auth', authRouter);
 app.use(paymentStripeRouter);
 
-app.listen(port, () => {
-  console.log(`Running backend server on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//  console.log(`Running backend server on http://localhost:${port}`);
+// });
 
-export default app
+module.exports = app
