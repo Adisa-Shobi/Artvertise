@@ -21,7 +21,7 @@ function LoginForm() {
 		console.log('USER>>>', response.user)
 		console.log('USER JSON ----->', response.success)
 
-		if(response.success === 'ok') {
+		if(response.ok) {
 			const data = await response.user;
 			console.log(data)
 			StorageService.saveUser(data)
