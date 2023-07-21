@@ -18,8 +18,8 @@ function LoginForm() {
 	try {
 		const response = await AuthService.login(email, password);
 		console.log(response)
-		console.log('USER>>>', response.user)
-		console.log('USER JSON ----->', response.success)
+		//console.log('USER>>>', response.user)
+		//console.log('USER JSON ----->', response.success)
 
 		if(response.ok) {
 			const data = await response.user;
